@@ -8,6 +8,8 @@
  * @version 1.0.0
  */
 
+const { removeDuplicateTags } = require('./helpers.js')
+
 /**
  * The note class that represents a single note.
  */
@@ -34,12 +36,10 @@ class Note {
 
     this.id = id
     this.text = text.trim()
-    // Validates the color: If a empty string then it defaults to 'white'.
+    // If a empty string then it defaults to 'white'.
     this.color = typeof color === 'string' && color.trim().length > 0 ? color : 'white'
-    // Validates that the tags are not an array of empty strings.
-    this.tags = Array.isArray(tags)
-      ? tags.filter(tag => typeof tag === 'string' && tag.trim().length > 0)
-      : []
+    // Checks that the tags are not an array of empty strings.
+    this.tags = removeDuplicateTags(tags)
   }
 }
 
