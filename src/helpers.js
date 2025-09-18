@@ -52,7 +52,6 @@ function removeDuplicateTags (tags) {
   if (!Array.isArray(tags)) return []
 
   const unique = []
-  // Goes through every tag in the array.
   for (const tag of tags) {
     if (typeof tag === 'string') {
       const clean = tag.trim()

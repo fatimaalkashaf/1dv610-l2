@@ -24,21 +24,18 @@ class Note {
    * @throws {Error} - If id is not a number or if text is empty.
    */
   constructor (id, text, color = 'white', tags = []) {
-    // Validates that the id is a number.
     if (typeof id !== 'number') {
       throw new Error('id must be a number')
     }
 
-    // Validates that the text is a non-empty string.
     if (typeof text !== 'string' || text.trim().length === 0) {
       throw new Error('text cannot be a empty string')
     }
 
     this.id = id
     this.text = text.trim()
-    // If a empty string then it defaults to 'white'.
+    // If its a empty string then it defaults to 'white'.
     this.color = typeof color === 'string' && color.trim().length > 0 ? color : 'white'
-    // Checks that the tags are not an array of empty strings.
     this.tags = removeDuplicateTags(tags)
   }
 }

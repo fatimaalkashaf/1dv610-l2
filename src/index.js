@@ -7,7 +7,9 @@
  */
 
 const { Note } = require('./note.js')
+const { Notebook } = require('./notebook.js')
 
 module.exports = {
-  Note
+  Note,
+  Notebook
 }
