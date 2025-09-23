@@ -1,5 +1,5 @@
 /**
- * Testfile for the Note class.
+ * Test file for the Note class.
  *
  * @file note.test.js
  * @author Fatima Alkashaf <fa223ns@student.lnu.se>
@@ -43,7 +43,7 @@ describe('The note validation', () => {
    * Tests that creating a note with an empty or blank text throws an error.
    */
   test('this should throw error for a invalid text', () => {
-    expect(() => new Note(1, '')).toThrow('text cannot be a empty string')
-    expect(() => new Note(1, '   ')).toThrow('text cannot be a empty string')
+    expect(() => new Note(1, '')).toThrow('text cannot be an empty string')
+    expect(() => new Note(1, '   ')).toThrow('text cannot be an empty string')
   })
 })

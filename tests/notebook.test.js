@@ -1,5 +1,5 @@
 /**
- * Testfile for the Notebook class
+ * Test file for the Notebook class
  *
  * @file notebook.test.js
  * @author Fatima Alkashaf <fa223ns@student.lnu.se>

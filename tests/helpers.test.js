@@ -1,5 +1,5 @@
 /**
- * Testfile for the helpers functions.
+ * Test file for the helpers functions.
  *
  * @file helpers.test.js
  * @author Fatima Alkashaf <fa223ns@student.lnu.se>

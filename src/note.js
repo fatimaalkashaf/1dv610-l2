@@ -29,7 +29,7 @@ class Note {
     }
 
     if (typeof text !== 'string' || text.trim().length === 0) {
-      throw new Error('text cannot be a empty string')
+      throw new Error('text cannot be an empty string')
     }
 
     this.id = id
