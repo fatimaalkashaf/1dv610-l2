@@ -17,7 +17,7 @@ All the tests are placed in a folder called **tests** and are divided into three
 All 12 tests passed successfully and works as expected.
 The tests covers both normal use cases and edge cases for error handling.
 All public methods and functions have been verified to work correctly with different types of inputs.
-The module is overall ready for use
+The module is overall ready for use.
 
 **Test Statistics**
 - **Total number of tests:** 12
