@@ -128,6 +128,23 @@ class Notebook {
   }
 
   /**
+   * Checks if there are any notes with duplicate text.
+   *
+   * @returns {boolean} - True if there is duplicate text otherwise false.
+   */
+  hasDuplicateTexts () {
+    const seenTexts = []
+    for (const note of this.notes) {
+      const cleanText = note.text.toLowerCase().trim() // Avoids false duplicates.
+      if (seenTexts.includes(cleanText)) {
+        return true
+      }
+      seenTexts.push(cleanText)
+    }
+    return false
+  }
+
+  /**
    * Finds a note/notes by its color.
    *
    * @param {string} color - The color to search for.
@@ -210,7 +227,37 @@ class Notebook {
   }
 
   /**
-   * Gets all of the tags that is used in the notes.
+   * Gets the most recently added note.
+   *
+   * @returns {Note|null} - The latest note object or null if the notebook is empty.
+   */
+  getLatestNote () {
+    if (this.notes.length === 0) return null
+
+    let latest = this.notes[0]
+    for (const note of this.notes) {
+      if (note.id > latest.id) {
+        latest = note
+      }
+    }
+    return latest
+  }
+
+  /**
+   * Gets the total number of tags across all notes even the duplicates.
+   *
+   * @returns {number} - The total number of tags.
+   */
+  getTotalTagCount () {
+    let total = 0
+    for (const note of this.notes) {
+      total += note.tags.length
+    }
+    return total
+  }
+
+  /**
+   * Gets all of the tags that is used in the notes without duplicates.
    *
    * @returns {string[]} - An array of all the tags.
    */
