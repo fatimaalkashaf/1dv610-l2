@@ -15,7 +15,14 @@ I also appreciate/like the rule *Don’t Be Cute* because I think it’s easy to
 ## Functions - Chapter 3
 ## A table of the longest methods/functions
 
+![Functions reflection table](images/functions.png)
+
 ## Reflection on Chapter 3
+I would say that Chapter 3 on functions has been very insightful. The *Do One Thing* principle turned out to be harder to implement than I expected. I think my *update* method is a clear example of that. It updates three different fields, which technically means it does three things. Now that I am writing this reflection, I think it would have been better to have separate methods for each type of update.
+
+I am happy that my functions are generally small and that I have been trying to avoid deep nesting. However, I noticed some code duplication between *searchByText*, *findByColor*, and *findByTag*. They all share similar validation logic and looping structure, and this goes against the *Don’t Repeat Yourself* principle.
+
+Finally, *Command Query Separation* was also something that I never thought about before. My *update* method both modifies the state and returns the updated note. I better way would maybe have been to separate these, so update only modifies and another method could have been used to fetch the results.
 
 ## Reflection on my own code quality
 
