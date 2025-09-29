@@ -25,5 +25,22 @@ I am happy that my functions are generally small and that I have been trying to 
 Finally, *Command Query Separation* was also something that I never thought about before. My *update* method both modifies the state and returns the updated note. I better way would maybe have been to separate these, so update only modifies and another method could have been used to fetch the results.
 
 ## Reflection on my own code quality
+Through working on this module and reading Chapters 1-3, I have gained a deeper understanding of code quality. I now see that the readability, maintainability, and clarity are just as important as the functionality of the code.
 
+I initially also miscounted the lines of my code, so I had to add three new methods in my notebook.js (*hasDuplicateTexts*, *getLatestNote*, *getTotalTagCount*). I would say that these also follow the Clean Code principles by being small, doing one thing, and having descriptive names. But one thing I didn’t have time to do with these methods was to add tests for them. The reason for that was that I also needed to finish another assignment in the other course that we have, as well as some personal family matters that Daniel is aware of, which required me to spend a lot of time at the hospital. However, this has taught me the importance, and how to count the lines of code correctly from the start next time. Also, writing this reflection has made me realize that writing code is a skill that can always be improved.
+
+**Strengths in my code:**
+- Consistent naming, like nouns for classes and verbs for methods.
+- Small functions that follow the Clean Code principles.
+- Good separation of responsibilities between classes.
+
+**Areas that can be improved:**
+- The code duplication in my search functions that violates the *Don’t Repeat Yourself* principle.
+- Could have thought more about 'Command Query Separation* in some of my methods.
+- My update method could have been separated in different methods because it’s doing more than one thing.
+
+**The key lesson that I take with me:**
+- *We are Authors* - The code that we write is also written for people to read, not just for computers.
+- *Later equals never* - We say that we will do it later, but we never do it
+- *The Boy Scout Rule* - We should always leave the code cleaner than we found it.
 
